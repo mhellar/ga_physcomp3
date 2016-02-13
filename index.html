@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Physical Computing: Week 3</title>
+    <title>Physical Computing: Day 3</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,10 +30,10 @@
         <div class="slides">
             <section>
                 <figure>
-                    <h2 class="intro">Physical Computing: Week 3</h2 class="intro">
-                        <h2 class="intro">Physical Computing: Week 3</h2 class="intro">
-                        <h2 class="intro">Physical Computing: Week 3</h2 class="intro">
-                        <h2 class="intro">Physical Computing: Week 3</h2 class="intro">                  
+                    <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
+                        <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
+                        <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
+                        <h2 class="intro">Physical Computing: Day 3</h2 class="intro">                  
                     </figure>
                 </section>
 
@@ -47,8 +47,9 @@
                 <section>
                     <ul>
                         <h3>Topics for This Week:</h3>
+                        <li class="fragment">The Servo</li>
                         <li class="fragment">Driving Higher Power Circuits</li>
-                        <li class="fragment">Introduction to NodeJS</li>
+                        <li class="fragment">Serial Communications: Part 2</li>
                         <li class="fragment">Connecting to external Software: Part 1</li>
                     </ul>
                 </section>
@@ -60,16 +61,54 @@
                 <section>                    
                        <iframe src="https://player.vimeo.com/video/58940104" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </section>
-                <section>                    
-                        <h4>Cool board of the Week:</h4>
-                        <a href="https://www.adafruit.com/products/2000">Trinket Pro:</a><br><br>
-                        <h4>Cool Meetup</h4>
-                        <a href="http://www.meetup.com/Hackster-SF">Tuesday Hardware Hacks!</a>
+
+
+                            <section>
+                <section>
+                    <h2>Controlling a Servo</h2>
+                    <img src="img/servo.png" height="500">
+                    <a href="#" class="navigate-down">
+                    </a>
                 </section>
+                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                    <h2>Servo_Sweep.ino</h2>
+                    <pre><code>
+#include <Servo.h>
+Servo myservo; // create servo object to control a servo
+// a maximum of eight servo objects can be created
+int pos = 0; // variable to store the servo position
+
+void setup() {
+myservo.attach(9); // attaches the servo on pin 9 to the servo object }
+
+void loop() {
+for(pos = 0; pos < 180; pos += 1) // goes from 0 degrees to 180 degrees
+}
+{ myservo.write(pos); delay(15);
+// in steps of 1 degree
+// tell servo to go to position in variable 'pos'
+// waits 15ms for the servo to reach the position
+}
+for(pos = 180; pos>=1; pos-=1) // goes from 180 degrees to 0 degrees 
+{
+myservo.write(pos); // tell servo to go to position in variable 'pos'
+delay(15); // waits 15ms for the servo to reach the position 
+}
+</code></pre>
+                </section>
+                <section>
+                    <h3>Servo With Potentiometer</h3>
+                    <img src="img/servo_w_pot.png" height="600">
+                </section>
+                <section>
+
+                    <h3 class="intro">Upload SERVO_KNOB.INO</h3>
+                </section>
+            </section>
                 
                 <section>
                     <section>
-                        <h3>Project 1<br>Controlling a higher power load</h3>
+                        <h3>Project 2<br>Controlling a higher power load</h3>
                         <img src="img/motor.jpg" height="500">
                         <br>
                         <a href="#" class="navigate-down">
@@ -150,11 +189,78 @@
             </section>
             </section>
             </section>
-            
+            <section>
+                    <h3>Excercise:</h3>
+                    <ul>
+                    <li>Create a circuit with 3 elements of input and output, one must be and analog input</li>
+                    <li>Write  a program for it, it would be nice if you log the input value to serial</li>
+                    </ul>
+             </section>
             
             <section>
                 <section data-background="img/nodejs.png" data-background-transition="zoom">
             </section>
+
+            <section>
+                <ul>
+                        <h3>Connecting Arduino to a webpage</h3>
+                        <li class="fragment">Make sure you have nodejs installed</li>
+                        <li class="fragment">Make sure you have Xcode command line tools installed</li>
+                        <li class="fragment">Open the terminal and type: sudo npm install n -g</li>
+                        <li class="fragment">Type: sudo n 0.9.6</li>
+                    </ul>
+
+            </section>
+            <section>                    
+                        <h4>Arduino to HTML</h4>
+                        <p>Connect a potentiometer</p>
+                        <img src="img/1.png" height="500">
+                        <a href="#" class="navigate-down">
+                        </a>
+                </section>
+                <section>                    
+                        <h4>Arduino to HTML</h4>
+                        <p>Connect a potentiometer</p>
+                        <img src="img/2.png" height="500">
+                      
+                </section>
+    
+                <section>                    
+                        <h4>Arduino to HTML</h4>
+                        <p>1: Upload AnalogInOutSerial.ino to arduino from AnalogInOutSerial in the code folder</p><br>
+                        <p>2: From the terminal: cd to serialbasic folder and then type npm install</p><br>
+                        <p>3: Change the serial port in index.js to match your arduino port</p><br>
+                        <p>4: Run node index.js</p><br>
+                        <p>Ctrl+C twice on the terminal stops the program</p>
+                  
+                        </a>
+                </section>
+                <section>                    
+                        <h4>Arduino to HTML</h4>
+                        <p>1: From the terminal: cd to serial_ws folder and then type npm install</p><br>
+                        <p>2: Change the serial port in index.js in the serial_ws in the code folder to match your arduino port</p><br>
+                        <p>3: Run node index.js from serial_ws in the code folder</p><br>
+                        <p>4: Open web browser go to <a href="http://localhost:3000"></a>http://localhost:3000</p>
+
+                        </a>
+                </section>
+
+                <section>                    
+                        <h4>Arduino to HTML</h4>
+                        <p>1: From the terminal: cd to serial_circle folder and then type npm install</p><br>
+                        <p>2: Change the serial port in index.js in the serial_ws in the code folder to match your arduino port</p><br>
+                        <p>3: Run node index.js from serial_circle in the code folder</p><br>
+                        <p>4: Open web browser go to <a href="http://localhost:3000"></a>http://localhost:3000</p>
+                  
+                        </a>
+                </section>
+
+
+                <section>                    
+    
+                        <img src="img/interact.png" height="500">
+                      
+                </section>
 
         </div>
     </div>

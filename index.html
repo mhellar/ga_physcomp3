@@ -48,15 +48,12 @@
                     <ul>
                         <h3>Topics for This Week:</h3>
                         <li class="fragment">The Servo</li>
-                        <li class="fragment">Driving Higher Power Circuits</li>
-                        <li class="fragment">Serial Communications: Part 2</li>
-                        <li class="fragment">Connecting to external Software: Part 1</li>
+                        <li class="fragment">All about adressable LEDs</li>
+                        <li class="fragment">IR Remote Control</li>
+                        <li class="fragment">Controlling Higher Power Loads</li>
                     </ul>
                 </section>
                 
-                <section>                    
-                        <iframe src="https://player.vimeo.com/video/16379803" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/16379803">Viktor &ndash; 5000 Years of Chairs</a></p>
-                </section>
 
                 <section>                    
                        <iframe src="https://player.vimeo.com/video/58940104" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -104,6 +101,88 @@ delay(15); // waits 15ms for the servo to reach the position
 
                     <h3 class="intro">Upload SERVO_KNOB.INO</h3>
                 </section>
+            </section>
+
+<section>
+                <h3>Introduction to Addressable LEDS</h3>
+                <img src="img/wsring.png" height="200">
+                <img src="img/neostrip.png">
+                <img src="img/ws2811.png">
+                </section>
+                <section>
+                <h3>Basic LEDS Need a lot of Wiring</h3>
+                <img src="img/led.png" height="300">
+                </section>
+                <section>
+                <h3>Addressable LEDs provide circuitry to communicate serially</h3>
+                <img src="img/WS2812_c.jpg" height="300">
+                </section>
+                <section>
+                <h3>Each LED has a chip to receive, decode, drive LED’s and propagate data</h3>
+                <img src="img/rgb-smd-led-with-wit-integrated-ws2812b-chip-type.jpg" height="300">
+                </section>
+                <section>
+                <h3>They are chainable, fairly cheap and have their own resistors etc..</h3>
+                <img src="img/wall.jpg" height="400">
+                <h3>You can drive 10000's from 1 microcontroller</h3>
+                </section>
+                <section>
+                <p>Adafruit has branded these Neopixels</p>
+                <img src="img/ada.png">
+                </section>
+                <section>
+                <p>You can get them for half the price on Ebay as ws2812's</p>
+                <img src="img/ebay.png">
+                </section>
+                <section>
+                <h4>These have a 5v, GND and DIN pin</h4>
+                <img src="img/ring_pins.jpeg" height="400">
+                <h4>Connect 5v to 5v, GND to GND and DIN to Pin6</h4>
+                </section>
+                <section>
+                <p>Import the NeoPixel Library</p>
+                <img src="img/import_library.png">
+                </section>
+                <section>
+                <p>Import the NeoPixel Library</p>
+                <img src="img/neolib.png">
+                </section>
+                <section>
+                <p>Let's try some examples and write our own code!</p>
+                </section>
+                <section>
+                <p>FastLED</p>
+                <a href="http://fastled.io/">Fast LED Library</a>
+                </section>
+                <section>
+                <p>APA102</p>
+                <a href="https://cpldcpu.wordpress.com/2014/08/27/apa102/">APA102 aka “Superled”</a>
+                </section>
+                <section>
+                <p>Remote Control</p>
+                <img src="img/irremote.jpg" height="600">
+                </section>
+                <section>
+                <p>Hook Up the IR reciever</p>
+                <img src="img/irreceiver.jpg" height="600">
+                </section>
+                <section>
+                    <ul>
+                        <h3>There's a couple libraries</h3>
+                        <li class="fragment">IRremote</li>
+                        <li class="fragment">IRLremote</li>
+                        <li class="fragment">Install Both</li>
+                    </ul>
+                </section>
+                <section>
+                <p>Receive_Custom_neo.ino</p>
+                </section>
+
+            <section>
+                <h3>Assignment:</h3>
+                <ul>
+                    <li>Create an awesome remote controlled device!!/li>
+                </ul>
             </section>
                 
                 <section>
@@ -192,9 +271,7 @@ delay(15); // waits 15ms for the servo to reach the position
             <section>
 <iframe src="https://player.vimeo.com/video/16558492?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </section>
-            <section>
-<iframe src="https://player.vimeo.com/video/16558492?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</section>
+
             <section>
                     <h3>Excercise:</h3>
                     <ul>

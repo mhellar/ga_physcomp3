@@ -38,19 +38,17 @@
                 </section>
 
                 <section data-background="https://openclipart.org/download/208615/evil-robot-glitch-remix.svg" data-background-transition="zoom">
-                    <p><b>Slides are here: <br>http://mhellar.github.io/ga_physcomp3</b></p>
                     <br>
-                    <p><b><br><a href="http://bit.ly/1VBx1N4">http://bit.ly/1SNjZ2v</a></b></p>
+                    <p>Code Here:<b><br><a href="http://bit.ly/1SNjZ2v">http://bit.ly/1SNjZ2v</a></b></p>
                 </section>
-
-
-                <section>
+                                <section>
                     <ul>
-                        <h3>Topics for This Week:</h3>
-                        <li class="fragment">The Servo</li>
+                        <h3>Topics for Today:</h3>
+                        <li class="fragment">Displays(LCD)</li>
+                        <li class="fragment">Sensors</li>
                         <li class="fragment">All about adressable LEDs</li>
                         <li class="fragment">IR Remote Control</li>
-                        <li class="fragment">Controlling Higher Power Loads</li>
+                        <li class="fragment">Fritzing</li>
                     </ul>
                 </section>
                 
@@ -58,293 +56,165 @@
                 <section>                    
                        <iframe src="https://player.vimeo.com/video/58940104" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </section>
-
-
                             <section>
-                <section>
-                    <h2>Controlling a Servo</h2>
-                    <img src="img/servo.png" height="500">
-                    <a href="#" class="navigate-down">
-                    </a>
-                </section>
-                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                    <h2>Servo_Sweep.ino</h2>
-                    <pre><code>
-#include <Servo.h>
-Servo myservo; // create servo object to control a servo
-// a maximum of eight servo objects can be created
-int pos = 0; // variable to store the servo position
-
-void setup() {
-myservo.attach(9); // attaches the servo on pin 9 to the servo object }
-
-void loop() {
-for(pos = 0; pos < 180; pos += 1) // goes from 0 degrees to 180 degrees
-}
-{ myservo.write(pos); delay(15);
-// in steps of 1 degree
-// tell servo to go to position in variable 'pos'
-// waits 15ms for the servo to reach the position
-}
-for(pos = 180; pos>=1; pos-=1) // goes from 180 degrees to 0 degrees 
-{
-myservo.write(pos); // tell servo to go to position in variable 'pos'
-delay(15); // waits 15ms for the servo to reach the position 
-}
-</code></pre>
-                </section>
-                <section>
-                    <h3>Servo With Potentiometer</h3>
-                    <img src="img/servo_w_pot.png" height="600">
-                </section>
-                <section>
-
-                    <h3 class="intro">Upload SERVO_KNOB.INO</h3>
-                </section>
+                <img src="img/lcd2.jpg"><br>
+            </section>
+            <section>
+                <img src="img/header.jpg"><br>
+            </section>
+            <section data-background-image="img/lcd.png">
+            </section>
+            <section>
+                To wire your LCD screen, connect the following pins:
+                <br><br>
+                <ul>
+                    <li>LCD RS pin to digital pin 12</li>
+                    <li>LCD Enable pin to digital pin 11</li>
+                    <li>LCD D4 pin to digital pin 5</li>
+                    <li>LCD D5 pin to digital pin 4</li>
+                    <li>LCD D6 pin to digital pin 3</li>
+                    <li>LCD D7 pin to digital pin 2</li><br> Additionally, wire a 10k pot to +5V and GND, with it's wiper (output) to LCD screens VO pin (pin3). A 220 ohm resistor is used to power the backlight of the display, usually on pin 15 and 16 of
+                    the LCD connector
+            </section>
+            <section>
+                <img src="img/lcd.png"><br>
+            </section>
+            <section>
+                Run HelloWorldLCD
+            </section>
+            <section>
+                Run SerialDisplay - Open serial monitor and pass some data
+            </section>
+            <section>
+                <a href="https://www.arduino.cc/en/Reference/LiquidCrystal">Arduino Liquid Crystal Display Library</a>
             </section>
 
-<section>
+            <section>
+            <img src="img/hcsr04_hires.jpg">
+            </section>
+
+
+
+
+          <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>
+                    The HC-SR04 ultrasonic sensor uses sonar to determine distance to an object like bats do. It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package. From 2cm to 400 cm or 1” to 13 feet. It operation is not affected by sunlight or black material like an infrared rangefinders are (although acoustically soft materials like cloth can be difficult to detect). It comes complete with ultrasonic transmitter and receiver module.</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Features</p>
+                <ul>
+                    <li>Power Supply :+5V DC</li>
+                    <li>Ranging Distance : 2cm – 400 cm/1″ – 13ft</li>
+                    <li>Resolution : 0.3 cm</li>
+                    <li>Measuring Angle: 30 degree</li>
+                    <li>Trigger Input Pulse width: 10uS</li>
+                    <li>Dimension: 45mm x 20mm x 15mm</li>
+                </ul>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Build the following circuit</p>
+                <img src="img/hc2r04.png" height="400">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Upload HC-SR04.ino</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Libraries</p>
+                <br>
+                <p>The Arduino environment can be extended through the use of libraries, just like most programming platforms. Libraries provide extra functionality for use in sketches, e.g. working with hardware or manipulating data. To use a library in a sketch, select it from Sketch > Import Library. A number of libraries come installed with the IDE, but you can also download or create your own.</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Let install the NewPing library</p>
+                <br>
+                <p>Go to 'Sketch'->'Include Library'->'Manage Libraries'</p>
+                <img src="img/lib.png" height="400">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Search for 'New Ping'</p>
+                <br>
+                <img src="img/newping.png" height="400">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Go to 'File'->'Examples'->'NewPing'->'NewPingExample'</p>
+            </section>
+            <section>
                 <h3>Introduction to Addressable LEDS</h3>
                 <img src="img/wsring.png" height="200">
                 <img src="img/neostrip.png">
                 <img src="img/ws2811.png">
-                </section>
-                <section>
+            </section>
+            <section>
                 <h3>Basic LEDS Need a lot of Wiring</h3>
                 <img src="img/led.png" height="300">
-                </section>
-                <section>
+            </section>
+            <section>
                 <h3>Addressable LEDs provide circuitry to communicate serially</h3>
                 <img src="img/WS2812_c.jpg" height="300">
-                </section>
-                <section>
+            </section>
+            <section>
                 <h3>Each LED has a chip to receive, decode, drive LED’s and propagate data</h3>
                 <img src="img/rgb-smd-led-with-wit-integrated-ws2812b-chip-type.jpg" height="300">
-                </section>
-                <section>
+            </section>
+            <section>
                 <h3>They are chainable, fairly cheap and have their own resistors etc..</h3>
                 <img src="img/wall.jpg" height="400">
                 <h3>You can drive 10000's from 1 microcontroller</h3>
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>Adafruit has branded these Neopixels</p>
                 <img src="img/ada.png">
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>You can get them for half the price on Ebay as ws2812's</p>
                 <img src="img/ebay.png">
-                </section>
-                <section>
+            </section>
+            <section>
                 <h4>These have a 5v, GND and DIN pin</h4>
                 <img src="img/ring_pins.jpeg" height="400">
                 <h4>Connect 5v to 5v, GND to GND and DIN to Pin6</h4>
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>Import the NeoPixel Library</p>
                 <img src="img/import_library.png">
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>Import the NeoPixel Library</p>
                 <img src="img/neolib.png">
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>Let's try some examples and write our own code!</p>
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>FastLED</p>
                 <a href="http://fastled.io/">Fast LED Library</a>
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>APA102</p>
                 <a href="https://cpldcpu.wordpress.com/2014/08/27/apa102/">APA102 aka “Superled”</a>
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>Remote Control</p>
                 <img src="img/irremote.jpg" height="600">
-                </section>
-                <section>
+            </section>
+            <section>
                 <p>Hook Up the IR reciever</p>
                 <img src="img/irreceiver.jpg" height="600">
-                </section>
-                <section>
-                    <ul>
-                        <h3>There's a couple libraries</h3>
-                        <li class="fragment">IRremote</li>
-                        <li class="fragment">IRLremote</li>
-                        <li class="fragment">Install Both</li>
-                    </ul>
-                </section>
-                <section>
-                <p>Receive_Custom_neo.ino</p>
-                </section>
-
+            </section>
             <section>
-                <h3>Assignment:</h3>
                 <ul>
-                    <li>Create an awesome remote controlled device!!/li>
+                    <h3>Install IRLRemote</h3>
+                    <li><a href="https://github.com/NicoHood/IRLremote">IRL remote</a></li>
                 </ul>
             </section>
-                
-                <section>
-                    <section>
-                        <h3>Project 2<br>Controlling a higher power load</h3>
-                        <img src="img/motor.jpg" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                        <h3>Parts for this project:</h3>
-                        <ul>
-                        <li>Solderless Breadboard</li>
-                        <li>5 x Flexible Wire Jumpers</li>
-                        <li>1 x DC Motor</li>
-                        <li>1 x 9 volt Battery</li>
-                        <li>1 x 9 volt Battery Clip</li>
-                        <li>1 x irf520 Transistor</li>
-                        <li>Arduino Duo board</li>
-                        <li>USB Cable</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Step 1</h3><br>
-                        <img src="img/step1_motor.png" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                    <h3>Step 2</h3><br>
-                        <img src="img/step2_motor.png" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                    <h3>Step 3</h3><br>
-                        <img src="img/step3_motor.png" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                    <h3>Step 4</h3><br>
-                        <img src="img/step4_motor.png" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                    <h3>Step 5</h3><br>
-                        <img src="img/step5_motor.png" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                    <h3>Step 6</h3><br>
-                        <img src="img/step6_motor.png" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-                    <section>
-                    <h3>The Transistor</h3><br>
-                        <img src="img/transistor.jpg" height="500">
-                        <br>
-                        <a href="#" class="navigate-down">
-                        </a>
-                    </section>
-<section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                    <h2 class="intro">Upload 'MotorFader.ino'</h2>
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <h2 class="intro">Upload 'SerialMotorControl.ino'</h2>
+            <section>
+                <p>Receive_Custom_neo.ino</p>
             </section>
             <section>
-            <h3>Relay Shield</h3>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <img src="img/relay.jpg" height="500">
-            </section>
-            </section>
-            </section>
-            <section>
-<iframe src="https://player.vimeo.com/video/16558492?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</section>
-
-            <section>
-                    <h3>Excercise:</h3>
-                    <ul>
-                    <li>Create a circuit with 3 elements of input and output, one must be and analog input</li>
-                    <li>Write  a program for it, it would be nice if you log the input value to serial</li>
-                    </ul>
-             </section>
-            
-            <section>
-                <section data-background="img/nodejs.png" data-background-transition="zoom">
-            </section>
-
-            <section>
-                <ul>
-                        <h3>Connecting Arduino to a webpage</h3>
-                        <li class="fragment">Make sure you have nodejs installed</li>
-                        <li class="fragment">Make sure you have Xcode command line tools installed</li>
-                        <li class="fragment">Open the terminal and type: sudo npm install n -g</li>
-                        <li class="fragment">Type: sudo n 0.9.6</li>
-                    </ul>
+            <ul>
+                    <li><a href="http://fritzing.org/">http://fritzing.org/</a></li>
+                </ul>
 
             </section>
-            <section>                    
-                        <h4>Arduino to HTML</h4>
-                        <p>Connect a potentiometer</p>
-                        <img src="img/1.png" height="500">
-                        <a href="#" class="navigate-down">
-                        </a>
-                </section>
-                <section>                    
-                        <h4>Arduino to HTML</h4>
-                        <p>Connect a potentiometer</p>
-                        <img src="img/2.png" height="500">
-                      
-                </section>
-    
-                <section>                    
-                        <h4>Arduino to HTML</h4>
-                        <p>1: Upload AnalogInOutSerial.ino to arduino from AnalogInOutSerial in the code folder</p><br>
-                        <p>2: From the terminal: cd to serialbasic folder and then type npm install</p><br>
-                        <p>3: Change the serial port in index.js to match your arduino port</p><br>
-                        <p>4: Run node index.js</p><br>
-                        <p>Ctrl+C twice on the terminal stops the program</p>
-                  
-                        </a>
-                </section>
-                <section>                    
-                        <h4>Arduino to HTML</h4>
-                        <p>1: From the terminal: cd to serial_ws folder and then type npm install</p><br>
-                        <p>2: Change the serial port in index.js in the serial_ws in the code folder to match your arduino port</p><br>
-                        <p>3: Run node index.js from serial_ws in the code folder</p><br>
-                        <p>4: Open web browser go to <a href="http://localhost:3000"></a>http://localhost:3000</p>
-
-                        </a>
-                </section>
-
-                <section>                    
-                        <h4>Arduino to HTML</h4>
-                        <p>1: From the terminal: cd to serial_circle folder and then type npm install</p><br>
-                        <p>2: Change the serial port in index.js in the serial_ws in the code folder to match your arduino port</p><br>
-                        <p>3: Run node index.js from serial_circle in the code folder</p><br>
-                        <p>4: Open web browser go to <a href="http://localhost:3000"></a>http://localhost:3000</p>
-                  
-                        </a>
-                </section>
-
-
-                <section>                    
-    
-                        <img src="img/interact.png" height="500">
-                      
-                </section>
-
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>

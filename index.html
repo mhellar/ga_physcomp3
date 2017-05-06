@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <!-- Printing and PDF exports -->
     <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
     <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
@@ -31,111 +31,38 @@
             <section>
                 <figure>
                     <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
-                        <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
-                        <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
-                        <h2 class="intro">Physical Computing: Day 3</h2 class="intro">                  
-                    </figure>
-                </section>
+                    <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
+                    <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
+                    <h2 class="intro">Physical Computing: Day 3</h2 class="intro">
+                </figure>
+            </section>
 
-                <section data-background="https://openclipart.org/download/208615/evil-robot-glitch-remix.svg" data-background-transition="zoom">
-                    <br>
-                    <p>Code Here:<b><br><a href="http://bit.ly/2kUhjBH">http://bit.ly/2kUhjBH</a></b></p>
-                </section>
-                                <section>
-                    <ul>
-                        <h3>Topics for Today:</h3>
-                        <li class="fragment">Displays(LCD)</li>
-                        <li class="fragment">Sensors</li>
-                        <li class="fragment">All about adressable LEDs</li>
-                        <li class="fragment">IR Remote Control</li>
-                        <li class="fragment">Fritzing</li>
-                    </ul>
-                </section>
-                
-
-                <section>                    
-                       <iframe src="https://player.vimeo.com/video/58940104" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </section>
-                            <section>
+            <section data-background="https://openclipart.org/download/208615/evil-robot-glitch-remix.svg" data-background-transition="zoom">
+                <br>
+                <p>Code Here:<b><br><a href="http://bit.ly/2kUhjBH">http://bit.ly/2kUhjBH</a></b></p>
+            </section>
+            <section>
+                <ul>
+                    <h3>Topics for Today:</h3>
+                    <li class="fragment">Soldering</li>
+                    <li class="fragment">All about adressable LEDs</li>
+                    <li class="fragment">IR Remote Control</li>
+                    <li class="fragment">Displays(LCD)</li>
+                    <li class="fragment">Sensors</li>
+                    <li class="fragment">Fritzing</li>
+                </ul>
+            </section>
+            <section>
+                <iframe src="https://player.vimeo.com/video/58940104" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </section>
+            <section>
+                <p>Lets Practice</p>
+            </section>
+            <section>
                 <img src="img/lcd2.jpg"><br>
             </section>
             <section>
                 <img src="img/header.jpg"><br>
-            </section>
-            <section data-background-image="img/lcd.png">
-            </section>
-            <section>
-                To wire your LCD screen, connect the following pins:
-                <br><br>
-                <ul>
-                    <li>LCD RS pin to digital pin 12</li>
-                    <li>LCD Enable pin to digital pin 11</li>
-                    <li>LCD D4 pin to digital pin 5</li>
-                    <li>LCD D5 pin to digital pin 4</li>
-                    <li>LCD D6 pin to digital pin 3</li>
-                    <li>LCD D7 pin to digital pin 2</li><br> Additionally, wire a 10k pot to +5V and GND, with it's wiper (output) to LCD screens VO pin (pin3). A 220 ohm resistor is used to power the backlight of the display, usually on pin 15 and 16 of
-                    the LCD connector
-            </section>
-            <section>
-                <img src="img/lcd.png"><br>
-            </section>
-            <section>
-                Run HelloWorldLCD
-            </section>
-            <section>
-                Run SerialDisplay - Open serial monitor and pass some data
-            </section>
-            <section>
-                <a href="https://www.arduino.cc/en/Reference/LiquidCrystal">Arduino Liquid Crystal Display Library</a>
-            </section>
-
-            <section>
-            <img src="img/hcsr04_hires.jpg">
-            </section>
-
-
-
-
-          <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>
-                    The HC-SR04 ultrasonic sensor uses sonar to determine distance to an object like bats do. It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package. From 2cm to 400 cm or 1” to 13 feet. It operation is not affected by sunlight or black material like an infrared rangefinders are (although acoustically soft materials like cloth can be difficult to detect). It comes complete with ultrasonic transmitter and receiver module.</p>
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Features</p>
-                <ul>
-                    <li>Power Supply :+5V DC</li>
-                    <li>Ranging Distance : 2cm – 400 cm/1″ – 13ft</li>
-                    <li>Resolution : 0.3 cm</li>
-                    <li>Measuring Angle: 30 degree</li>
-                    <li>Trigger Input Pulse width: 10uS</li>
-                    <li>Dimension: 45mm x 20mm x 15mm</li>
-                </ul>
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Build the following circuit</p>
-                <img src="img/hc2r04.png" height="400">
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Upload HC-SR04.ino</p>
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Libraries</p>
-                <br>
-                <p>The Arduino environment can be extended through the use of libraries, just like most programming platforms. Libraries provide extra functionality for use in sketches, e.g. working with hardware or manipulating data. To use a library in a sketch, select it from Sketch > Import Library. A number of libraries come installed with the IDE, but you can also download or create your own.</p>
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Let install the NewPing library</p>
-                <br>
-                <p>Go to 'Sketch'->'Include Library'->'Manage Libraries'</p>
-                <img src="img/lib.png" height="400">
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Search for 'New Ping'</p>
-                <br>
-                <img src="img/newping.png" height="400">
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <p>Go to 'File'->'Examples'->'NewPing'->'NewPingExample'</p>
             </section>
             <section>
                 <h3>Introduction to Addressable LEDS</h3>
@@ -209,60 +136,132 @@
             <section>
                 <p>Receive_Custom_neo.ino</p>
             </section>
+            <section data-background-image="img/lcd.png">
+            </section>
             <section>
-            <ul>
+                To wire your LCD screen, connect the following pins:
+                <br><br>
+                <ul>
+                    <li>LCD RS pin to digital pin 12</li>
+                    <li>LCD Enable pin to digital pin 11</li>
+                    <li>LCD D4 pin to digital pin 5</li>
+                    <li>LCD D5 pin to digital pin 4</li>
+                    <li>LCD D6 pin to digital pin 3</li>
+                    <li>LCD D7 pin to digital pin 2</li><br> Additionally, wire a 10k pot to +5V and GND, with it's wiper (output) to LCD screens VO pin (pin3). A 220 ohm resistor is used to power the backlight of the display, usually on pin 15 and 16 of
+                    the LCD connector
+            </section>
+            <section>
+                <img src="img/lcd.png"><br>
+            </section>
+            <section>
+                Run HelloWorldLCD
+            </section>
+            <section>
+                Run SerialDisplay - Open serial monitor and pass some data
+            </section>
+            <section>
+                <a href="https://www.arduino.cc/en/Reference/LiquidCrystal">Arduino Liquid Crystal Display Library</a>
+            </section>
+
+            <section>
+                <img src="img/hcsr04_hires.jpg">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>
+                    The HC-SR04 ultrasonic sensor uses sonar to determine distance to an object like bats do. It offers excellent non-contact range detection with high accuracy and stable readings in an easy-to-use package. From 2cm to 400 cm or 1” to 13 feet. It operation
+                    is not affected by sunlight or black material like an infrared rangefinders are (although acoustically soft materials like cloth can be difficult to detect). It comes complete with ultrasonic transmitter and receiver module.</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Features</p>
+                <ul>
+                    <li>Power Supply :+5V DC</li>
+                    <li>Ranging Distance : 2cm – 400 cm/1″ – 13ft</li>
+                    <li>Resolution : 0.3 cm</li>
+                    <li>Measuring Angle: 30 degree</li>
+                    <li>Trigger Input Pulse width: 10uS</li>
+                    <li>Dimension: 45mm x 20mm x 15mm</li>
+                </ul>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Build the following circuit</p>
+                <img src="img/hc2r04.png" height="400">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Upload HC-SR04.ino</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Libraries</p>
+                <br>
+                <p>The Arduino environment can be extended through the use of libraries, just like most programming platforms. Libraries provide extra functionality for use in sketches, e.g. working with hardware or manipulating data. To use a library in
+                    a sketch, select it from Sketch > Import Library. A number of libraries come installed with the IDE, but you can also download or create your own.</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Let install the NewPing library</p>
+                <br>
+                <p>Go to 'Sketch'->'Include Library'->'Manage Libraries'</p>
+                <img src="img/lib.png" height="400">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Search for 'New Ping'</p>
+                <br>
+                <img src="img/newping.png" height="400">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <p>Go to 'File'->'Examples'->'NewPing'->'NewPingExample'</p>
+            </section>
+            <section>
+                <ul>
                     <li><a href="http://fritzing.org/">http://fritzing.org/</a></li>
                 </ul>
-
             </section>
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-        transition: 'convex', // none/fade/slide/convex/concave/zoom
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-        // Optional reveal.js plugins
-        dependencies: [{
-            src: 'lib/js/classList.js',
-            condition: function() {
-                return !document.body.classList;
-            }
-        }, {
-            src: 'plugin/markdown/marked.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/markdown/markdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/highlight/highlight.js',
-            async: true,
-            condition: function() {
-                return !!document.querySelector('pre code');
-            },
-            callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {
-            src: 'plugin/zoom-js/zoom.js',
-            async: true
-        }, {
-            src: 'plugin/notes/notes.js',
-            async: true
-        }]
-    });
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
     </script>
 </body>
 
